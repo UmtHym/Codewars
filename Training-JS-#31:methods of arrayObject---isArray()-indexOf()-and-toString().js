@@ -21,18 +21,18 @@
 //First Solution
 function blackAndWhite(arr){  
     
-    if(!Array.isArray(arr)){
-    } else {
+    if (!Array.isArray(arr)){
         return "It's a fake array"
-        
+
     }else if(arr.indexOf(5) !== -1 && arr.indexOf(13) !== -1){
         return "It's a black array"
-        
+    }else {
         return "It's a white array"
     }
-    
-} 
+}
+
+
 
 //Second Solution
 
-const blackAndWhite = arr =>`It's a ${!Array.isArray(arr) ? `fake` : arr.includes(5) && arr.includes(13) ? `black` : `white`} array`;
+// const blackAndWhite = arr =>`It's a ${!Array.isArray(arr) ? `fake` : arr.includes(5) && arr.includes(13) ? `black` : `white`} array`;
