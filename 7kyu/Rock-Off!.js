@@ -12,28 +12,16 @@
 
 // The solution to the example above should therefore appear like  '1, 2: Bob made "Jeff" proud!'.
 
+const solve = (a, b) => {
+  let resultA = 0, resultB = 0;
 
-function solve(a, b) {
-    let resultA = 0
-    let resultB = 0
-    let theText = ''
-  
-    for(let i=0; i< a.length;i++){
-     
-      if(a[i] === b[i]){
-        continue
-      }else if(a[i] > b[i]){
-        resultA += 1
-      }else if(b[i] > a[i]){
-        resultB += 1
-      }
-    } 
-    if (resultA === resultB){
-      theText = 'that looks like a "draw"! Rock on!'
-    } else if(resultA > resultB){
-      theText = 'Alice made "Kurt" proud!'
-    } else{
-      theText =  'Bob made "Jeff" proud!'
-    }
-  return `${resultA}, ${resultB}: ${theText}`
-  }
+  a.forEach((val, i) => {
+    if (val !== b[i]) val > b[i] ? resultA++ : resultB++;
+  });
+
+  const theText = resultA === resultB ? 'that looks like a "draw"! Rock on!' :
+                  resultA > resultB ? 'Alice made "Kurt" proud!' : 
+                  'Bob made "Jeff" proud!';
+                  
+  return `${resultA}, ${resultB}: ${theText}`;
+};
