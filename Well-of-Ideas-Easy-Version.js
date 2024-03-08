@@ -18,3 +18,10 @@ function well(x){
           return 'Fail!'
         }
     }
+
+    // Second time for clearer syntax
+
+    let well = (x) => {
+      let result = !(x.includes('good')) ? 'Fail!' : (x.filter(el => el === 'good')).length <= 2 ? 'Publish!' : 'I smell a series!'
+       return result
+       }
