@@ -13,3 +13,10 @@ function doubleChar(str) {
     }
     return newStr
   }
+  
+  //or
+
+  function doubleChar(str) {
+    let newArr = str.split('')
+    return newArr.map(el => el = el+el).join('')
+  }
