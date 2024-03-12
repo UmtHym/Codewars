@@ -32,3 +32,9 @@ function validateNumber(str){
     } 
     
   }
+
+  // Refurbished
+
+  function validateNumber(str){
+    return /^(\+44|0)7\d{9}$/g.test(str.replace(/-/g,'')) ? 'In with a chance' : 'Plenty more fish in the sea'; 
+  }
