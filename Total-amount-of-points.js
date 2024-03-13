@@ -28,3 +28,11 @@ let points = (games)=>{
     })
     return totalPoints
    }
+
+   // refurbished
+
+   let points=(games)=> {
+    let points = 0
+    games.forEach((el,i,arr)=> el[0]>el[2] ? points +=3 : el[0] === el[2] ? points++ : points)
+    return points
+  }
