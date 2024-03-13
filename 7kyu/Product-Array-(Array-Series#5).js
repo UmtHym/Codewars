@@ -35,19 +35,19 @@ function productArray(numbers){
      return newArray;
    }
    
-   // for clearer reading
+   // for more precise calculations but O(n^2) because filter adds a layer to n (length)
+
+   let productArray = (numbers) => { 
+    let result = numbers.map((_, index) => 
+        numbers
+          .filter((_, filterIndex) => filterIndex !== index)
+          .reduce((acc, curr) => acc * curr, 1)
+    );
+  return result
+  }
    
-   // function productArray(numbers){
-   //   let newArray = [];
-   //   numbers.forEach(el => {
-   //     let product = numbers.reduce((a, b) => a * b) / el;
-   //     newArray.push(product);
-   //   });
-   //   return newArray;
-   // }
+   // and for the dry'est code and O(n) complexity
    
-   // and for the dry'est code 
-   
-   // function productArray(numbers){
-   //   return numbers.map(x => numbers.reduce((a,b) => a * b) / x)
-   // }
+   function productArray(numbers){
+     return numbers.map(x => numbers.reduce((a,b) => a * b) / x)
+   }
