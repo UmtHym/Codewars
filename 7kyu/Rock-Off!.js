@@ -25,3 +25,12 @@ const solve = (a, b) => {
                   
   return `${resultA}, ${resultB}: ${theText}`;
 };
+
+// more concise syntax
+
+function solve(a, b) {
+  let alice = 0, bob = 0; 
+    a.forEach((el,i)=> el > b[i] ? alice++ : b[i] > el ? bob++ : 0);
+    let statement = (alice === bob) ? 'that looks like a "draw"! Rock on!' : (alice > bob) ? 'Alice made "Kurt" proud!':'Bob made "Jeff" proud!'
+      return `${alice}, ${bob}: ${statement}`
+  }
