@@ -19,3 +19,5 @@ function removeSmallest(numbers) {
     let newArray = numbers.filter((_,i)=> i !== numbers.indexOf(smallest))
     return newArray;
   }
+
+  //Inside filter method we check if the index of the current element is not the same with the smallest elements index, which we established earlier,than filter is true and it passes to the new array. when it is the same, than the function becomes false and filters out that element. (So filter in principle filters out the elements that comes out false inside function)
