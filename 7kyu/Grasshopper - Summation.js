@@ -13,10 +13,16 @@ let summation = (num) => {
     return result
   }
   
-  
+  //for O(n) Time complexity
   // passing in a number, positive integer > 0, not a float
   // return an integer > 0 that is the sum of the integers from 1 to num
   // declare a variable to hold the the running total
   // loop through each value but not exceeding the actual num
   // use a for loop for starting at 1 going to the value of num
   // inside of each loop, add the current integer value to the running total
+
+  
+  //for O(1) Time complexity
+
+  // let summation = (num) => num * (num + 1) / 2;
+  
