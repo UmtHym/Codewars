@@ -40,3 +40,5 @@ function getMiddle(s){
 function getMiddle(s){
     return s.slice((s.length-1)/2, s.length/2+1)
   }
+
+//keep in mind that slice second param is not inclusive and it automatically floors the float numbers
