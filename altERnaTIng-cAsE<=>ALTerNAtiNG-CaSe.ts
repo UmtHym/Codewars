@@ -21,3 +21,9 @@ export function toAlternatingCase(s: string): string {
     }
       return strArr.join('')
   }
+
+  // DRY, method solution
+
+  export function toAlternatingCase(s: string): string {
+    return s.split("").map(e => e === e.toUpperCase()? e.toLowerCase(): e.toUpperCase()).join('')
+  }
