@@ -11,19 +11,22 @@
 //Brute Force Solution
 
 export function toAlternatingCase(s: string): string {
-    let strArr: string[] = s.split('')
-    for(let i=0; i < strArr.length; i++){
-      if(strArr[i] === strArr[i].toUpperCase()){
-        strArr[i] = strArr[i].toLowerCase()
-      }else{
-         strArr[i] = strArr[i].toUpperCase() 
-        }
+  let strArr: string[] = s.split("");
+  for (let i = 0; i < strArr.length; i++) {
+    if (strArr[i] === strArr[i].toUpperCase()) {
+      strArr[i] = strArr[i].toLowerCase();
+    } else {
+      strArr[i] = strArr[i].toUpperCase();
     }
-      return strArr.join('')
   }
+  return strArr.join("");
+}
 
-  // DRY, method solution
+// DRY, method solution
 
-  export function toAlternatingCase(s: string): string {
-    return s.split("").map(e => e === e.toUpperCase()? e.toLowerCase(): e.toUpperCase()).join('')
-  }
+export function toAlternatingCase(s: string): string {
+  return s
+    .split("")
+    .map((e) => (e === e.toUpperCase() ? e.toLowerCase() : e.toUpperCase()))
+    .join("");
+}
